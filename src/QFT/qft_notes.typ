@@ -10,12 +10,13 @@
 // Define the Solution block
 
 
+
+
 #show: ilm.with(
   title: "Quantum Field Theory Notes",
   author: "Chance Emrich",
   date: datetime(year: 2026, day: 26, month: 05),
 )
-
 
 
 
@@ -30,3 +31,4 @@
 
 #include "Field Theories/Field_Theories.typ"
 #include "QED/QED.typ"
+#bibliography("Citations/works.bib", full:true)
