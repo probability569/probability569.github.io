@@ -133,11 +133,13 @@ This provides $ bra(pphi_f)T ket(pphi_i) = bra(pphi_f) V ket(pphi_i) + bra(pphi_
   - This is similar to other matrix elements
 
 - First order: $ T_(f i) = integral dif^3 arrow(p)_gamma ddelta(3,arrow(p)_1 - arrow(p)_2 - arrow(p)_gamma) ddelta(3,arrow(p)_2 - arrow(p)_4 + arrow(p)_gamma) e^2/(E_i - E_n) $
-    - Energy is not conserved in such intermediate states (otherwise $E_i = E_n$ would blow up)
+    - Energy is not conserved in such intermediate states (otherwise $E_i = E_n$ would blow u
+=== Energy Calculations
 
 
+- Want to calculate the energy of the states
+
+#rules("Denotations")[
+  - Momenta of particles are $ arrow(p)_1, arrow(p)_2, arrow(p)_3, arrow(p)_4, arrow(p)_gamma $
   
-
-
-
-
+]

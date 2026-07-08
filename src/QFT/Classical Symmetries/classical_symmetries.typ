@@ -52,4 +52,8 @@ and $partial_mu cal(T)_munu = 0$.
 - They can be placeholders in Lagrangians 
 #example("Currents in Lagrangians")[
   In $ lag = - 1/4 F_munu F^munu - tilde(pphi) square pphi - i e A_mu (tilde(pphi) arrow.l.r(partial_mu) pphi ), $ we can write it as $ lag = - 1/4 F_munu F^munu - tilde(pphi) square pphi - A_mu J^mu $
+- Clearly, you can see how currents are used to represent quantities in lagrangians that we do not care for.
+
+
+
 ]
