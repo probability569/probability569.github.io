@@ -37,6 +37,8 @@ $ markrect((partial lag)/(partial pphi) - partial_mu (partial lag)/(partial (par
 #theorem("Extended Euler Lagrange Equations")[
   In order to minimize the action of a system with Lagrangian Density $cal(L)[phi.alt,partial_mu phi.alt, partial_nu partial_mu phi.alt, dots]$, the system must satisfy the _*Extended Euler Lagrange Equations*_:
    $ (partial cal(L))/(partial phi.alt) - partial_mu (partial cal(L))/(partial (partial_mu phi.alt)) + partial_nu partial_mu (partial cal(L))/(partial (partial_nu partial_mu phi.alt)) - dots.c = 0 $
+
+(This was actually a problem in the Schwartz QFT textbook, so if you are reading that, potentially skip this part.)
 ]
 
 #proof[
