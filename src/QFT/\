@@ -31,16 +31,3 @@
 - $ braket(p) = 2 omega_p V = 2 E_p V $
 
 - This implies that, since $ ket(i) = ket(p_1) ket(p_2) $ and $ ket(f) = product_j ket(p_j) $
-  - $ braket(i) = (2 E_1 V) (2 E_2 V) $
-  - $ braket(f) = product_j 2 E_j V $
-== Actually Calculating the S-matrix (perturbatively)
-- Notice that the _first order_ of a S-matrix is just $bb(1)$ since that is the case in which nothing happens
-- Write $S = bb(1) + i cal(T) $
-  - $cal(T) equiv$ *transfer matrix*
-  - $cal(T)$ implies momentum conservation since it vanishes unless $ket(i)$ and $ket*f)$ have the same 4-momentum
-- $cal(T) = ddelta(4,Sigma p) cal(M)$
-
-=== Matrix Elements
-
-- $mel(f,S- bb(1),i) = i ddelta(4,Sigma P) mel(f,cal(M),i)$
-  - $ abs(mel(f,S,i))^2 = delta^4(0) delta^4(Sigma p) (2 pi)^8 abs(mel(f,M,i))^2 \ = delta^4( Sigma p) T V (2 pi)^4 abs(cal(M))^2 $
