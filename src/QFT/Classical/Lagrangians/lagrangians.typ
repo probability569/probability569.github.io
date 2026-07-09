@@ -1,6 +1,6 @@
-#import "../macros.typ":*
+#import "../../macros.typ":*
 
-= Lagrangians
+== Lagrangians 
 #definition("Lagrangian")[
   The _Lagrangian_ (Density) $cal(L)$, similar to the _Hamiltonian_ $H$  (or $cal(H)$ for Hamiltonian density, defined as $H=integral dif^3 x cal(H)$) as they both can be used to describe the evolution of a system. In Field Theories, densities are used more commonly. The Density of either quantity, as stated before, is a more useful quantity in Field theories due to Lorentz Invariance and other such things. 
 ]

@@ -1,5 +1,5 @@
 = Lorentz and Spinors
-#import "../macros.typ":*
+#import "../../macros.typ":*
 
 == Lorentz Transformations
 

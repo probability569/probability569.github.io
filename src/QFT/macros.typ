@@ -31,10 +31,10 @@ custom function `feynman`: $feynman(x)$
 #let ddelta(x,y) = $(2 pi)^#x op(delta^#x)(#y)$
 
 #let proof = thmproof("proof","Proof")
-#let theorem = thmbox("theorem", "Theorem", fill: rgb("#e8f8f5"))
-#let definition = thmbox("definition", "Definition", fill: rgb("#fcf3cf"))
+#let theorem = thmbox("theorem", "Theorem", stroke: (left: 3pt + rgb("#e8f8f5")))
+#let definition = thmbox("definition", "Definition", stroke:( left: 3pt + rgb("#fcf3cf")))
 #let note = thmbox("note", "Note", stroke: (left: 3pt + rgb("#e67e22")), inset: (x: 10pt, y: 5pt)).with(numbering: none)
-#let physics = thmbox("physics", "Principle", fill: rgb("#ebf5fb"))
+//#let physics = thmbox("physics", "Principle", fill: rgb("#ebf5fb"))
 
 #let example = thmbox("example","Example")
 

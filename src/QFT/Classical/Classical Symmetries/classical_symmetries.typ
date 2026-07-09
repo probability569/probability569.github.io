@@ -1,9 +1,9 @@
-= Classical Symmetries
+== Classical Symmetries
 
-#import "../macros.typ":*
+#import "../../macros.typ":*
 
 
-== Noether's Theorem
+=== Noether's Theorem
 
 - This theorem is the core in the utilizing symmetries in classical and non-classical field theory. 
 

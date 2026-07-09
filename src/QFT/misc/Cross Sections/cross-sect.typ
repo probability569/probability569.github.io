@@ -1,5 +1,5 @@
 = Cross Sections
-#import "../macros.typ":*
+#import "../../macros.typ":*
 
 #rules("Important Result of this Section")[
   $ ((dif sigma)/(dif Omega) )_"CM" = 1/(64 pi^2 E_("CM")^2) abs(cal(M))^2 $ and the Born approximation $ ((dif sigma)/(dif Omega))_"Born" = m^2_e/(4 pi^2) [ op(tilde(V))(arrow(k))]^2 $

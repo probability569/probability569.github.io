@@ -1,4 +1,4 @@
-#import "../macros.typ":*
+#import "../../macros.typ":*
 
 
 = Propagators

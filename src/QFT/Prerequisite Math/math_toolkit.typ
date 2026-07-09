@@ -7,11 +7,14 @@
 
 == Notation (Read everything or you won't be able to understand later, or come back to it later)
 - (Loose) Einstein Summation notation is used in which if an index appears twice in both top and bottom, such as $partial_mu partial^mu$, it is equivalent to summing over said indices such as $sum_(mu in {0,1,2,3}) partial_mu partial^mu$
-  - The reason that this is loose is due to the fact that if two indices appear twice in an expression but they are both on the bottom, it is implied that the reader should raise the second appearance of the index. Here is an example so you (the reader AND me) don't get confused: $partial_mu partial_mu = partial_mu partial^mu = sum_(mu in {0,1,2,3}) partial_mu partial^mu$
+  - The reason that this is loose is due to the fact that if two indices appear twice in an expression but they are both on the bottom, it is implied that the reader should raise the second appearance of the index. The following is an example so the reader doesn't get confused: $partial_mu partial_mu = partial_mu partial^mu = sum_(mu in {0,1,2,3}) partial_mu partial^mu$
 - The _Dirac Delta Function_ is defined as $ delta(x) = cases(0 & "if "x eq.not 0, oo & "if" x =0) $ with $ integral d x space delta(x) = 1 $
+This is not, in fact, a function, due to its unorthodox definition. Instead, it is a distribution (it can be defined as the limit of several different distributions, such as the _normal distribution_, a _uniform distribution_, etc.).
 - $arrow(x) = x^i$, $i in {1,2,3}$ (spatial components of $x$)
 - The _d'Alembertian_ operator $square equiv partial_mu partial^mu$
+This operator is useful in _Lagrangians_ and the _Klein-Gordon equation_.
 - The _Laplacian_ operator $triangle equiv partial_i partial^i$ where $i in {1,2,3}$
+
 - Natural Units are used in which $planck = c space= 1 $
 - Both Sided Derivative:  $pphi^* arrow.l.r(partial_mu) pphi equiv (pphi^*partial_mu pphi - pphi partial_mu pphi^*) $
 - Feynman Slash: $feynman(p) equiv p_mu gamma^mu$
@@ -31,6 +34,8 @@ and $sigma^mu equiv (sigma^0,arrow(sigma))$, $macron(sigma)^mu equiv (sigma^0, -
 - $psi^alpha  $ left handed Weyl spinor
 - $tilde(psi)_(dot(alpha))$ right handed Weyl spinor
 - $psi = mat(psi^alpha;tilde(chi)_(dot(beta)))$ Dirac spinor (Representation of $(1/2,0) plus.o (0,1/2)$)
+
+All of these expressions regarding spinors will be explained or will quickly become evident in Section 2, due to the complexity of their structure.
 == Integrals that are useful  
 
 - $  integral dif x space f(x) delta (x^2 -a^2 ) = 1/(2|a|) (f(a)+f(-a)) $

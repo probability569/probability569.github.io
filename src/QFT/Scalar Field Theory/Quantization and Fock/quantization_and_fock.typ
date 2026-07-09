@@ -1,19 +1,32 @@
-#import "../macros.typ":*
+#import "../../macros.typ":*
+= Scalar Field Theory
+- Scalar Field Theory is fairly similar to Classical Field Theory with the exception that it is quantized via the methods that will be presented shortly. This ensures that it obeys the laws of quantum mechanics, while still being a "Toy Theory" due to the simplicity of the objects involved in it ((potentially) complex fields $pphi$ as opposed to _vectors_ $A_mu$ or _spinors_ $psi$ which are closer to real, physical particles).
+== Quantization
 
-= Quantization
-== Harmonic Oscillator/First Quantization
+- As seen in David Tong's Quantum Field Theory Notes, one could try to naively try to quantize the Schrodinger Equation (via the use of a series to have the equation be on-shell), which would bring rise to some problems
+
+$
+
+H ket(psi) = i partial_t ket(psi)
+
+\
+
+H = sqrt(hat(p)^2 + m^2)
+$
+
+=== Harmonic Oscillator/First Quantization
 
 
-- The standard Hamiltonian for a simple harmonic oscillator is $ H = 1/2 p^2/(2 m) + 1/2 m omega^2 x^2 $
+- The standard Hamiltonian for a simple harmonic oscillator is $ H = 1/2 p^2/(2 m) + 1/2 m omega^2 x^2 $. The relevance to quantization will become apparent.
 
 #definition("First Quantization")[
-  The idea behind first quantization is to apply the commutation relation $[hat(x),hat(p) ]=i$ to a system.
+  The idea behind first quantization is to apply the commutation relation $[hat(x),hat(p) ]=i$ to a system. This commutation relation is known as the _canonical commutation relation_, and it can be used to obtain quantum mechanics from a classical theory (which we are doing now).
 ]
 
-- Utilizing a change of variables to $ a$ and $a^dagger $, one can derive an alternative form for the Hamiltonian
-  - $ a equiv sqrt((m omega)/2)(x + (i p)/(m omega)), space a^dagger equiv sqrt((m omega)/2) (x - ( i p)/(m omega)) $
-  - This implies that  $ H = omega(a^dagger a + 1/2) $
+- Utilizing a change of variables to $ a$ and $a^dagger $, one can derive an alternative form for the Hamiltonian $ a equiv sqrt((m omega)/2)(x + (i p)/(m omega)), space a^dagger equiv sqrt((m omega)/2) (x - ( i p)/(m omega)) $
+  - $ H = omega(a^dagger a + 1/2) $ is written in a very suggestive form. Such $a^dagger$ and $a$ can be thought of as "exciting" the harmonic oscillator, as you may know from quantum mechanics. 
   - The eigenstates of this Hamiltonian are eigenstates of $hat(N) equiv a^dagger a $
+- Notice that this hamiltonian's eigenvalues (the energies of the eigenstates) are discrete. This is a result from quantum mechanics (or, rather, defining quantum mechanics). Such a result is the reason behind both the name _Quantum Mechanics_ and the idea of _First Quantization_.
 - $hat(N)$ operator: 
   - $hat(N) ket(n) = n ket(n)$
   - $a^dagger ket(n) = sqrt(n+1) ket(n+1)$
@@ -26,7 +39,7 @@
   - Solution to this is $ pphi(x,t) = integral diff(3,p) [a_p (t) e^(i arrow(p) dot arrow(x)) + tilde(a_p) (t) e^(- i arrow(p) dot arrow(x))]   $
   which is written in a fairly suggestive manner
 
-== 2nd Quantization
+=== 2nd Quantization
 #definition("Second Quantization")[To obtain 2nd quantization (and hence quantum field theory), one can use an annihilation operator $a_p$ and a creation operator $a_p^dagger$ which exist per wave number as opposed to being universal since now, we utilize infinite harmonic oscillators which exist per $p$
 ]
 - Free Hamiltonian is obtained via integration over these $ H = integral diff(3,p) omega_p (a^dagger_p a_p + 1/2) $
@@ -60,7 +73,7 @@
   This is the expected result of $braket(arrow(p),arrow(x))$, and so we conclude $pphi_0(arrow(x)) ket(0) = ket(arrow(x))$
 ]
 
-== Time Dependence
+=== Time Dependence
 - Because of Heisenberg's equations of motion, in the Heisenberg perspective, $a_p (t)$ and $a_p^dagger (t)$ are time dependent
   - $a_p (t) = e^(-i omega_p t) a_p, a_p^dagger (t) = e^(i omega_p t) a_p^dagger $
 - Heisenberg equations of motion
