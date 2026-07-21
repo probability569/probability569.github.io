@@ -64,6 +64,11 @@
 
 - Therefore, we have the LSZ Reduction Formula $ mel(p_3 dots.c p_j, S, p_1 p_2) = [i integral dif^4 x_1 e^(- i p_1 x_1) (square_1 + m^2)] \ times dots.c times [i integral dif^4 x_j e^(i p_j x_j) (square_j + m^2)] \ times bra(Omega) T pphi(x_1) pphi(x_2) dots pphi(x_j) ket(Omega) $
 
+==== LSZ For Operators
+
+- The LSZ Reduction formula is relatively powerful, as it applies for all operators $scr(O)_j$
+
+- This implies that $ mel(p_3 dots.c p_j, S, p_1 p_2) = [i integral dif^4 x_1 e^(- i p_1 x_1) (square_1 +m^2)] \ times dots.c times [i integral dif^4 x_j e^(i p_j x_j) (square_j +m^2)] \ times bra(Omega) T scr(O)_1 (x_1) dots scr(O)_j (x_j) ket(Omega) $
 
 
 === Feynman Propagators
