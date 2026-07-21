@@ -1,9 +1,9 @@
-== Classical Symmetries
+=== Classical Symmetries
 
 #import "../../macros.typ":*
 
 
-=== Noether's Theorem
+==== Noether's Theorem
 
 - This theorem is the core in the utilizing symmetries in classical and non-classical field theory. 
 
@@ -44,7 +44,7 @@ and $partial_mu cal(T)_munu = 0$.
     - In the case of Lagrangians with $dot(pphi) = pi = partialderivative(lag,pphi)$, $cal(E) = cal(H)$ due to the _Legendre Transform_
 #definition("4-Momentum")[In terms of the energy-momentum tensor, 4-momentum $p^mu$ is defined as $ p^nu equiv integral dif^3 x cal(T)^(0 nu) = (E,arrow(p)) $]
 
-=== More information on currents
+==== More information on currents
 - A current can refer to a Noether current (such as the ones previously seen)
 - They can be external, such as a moving electron in a wire
 - They can be sources for fields

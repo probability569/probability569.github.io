@@ -1,6 +1,6 @@
 #import "../macros.typ":*
 
-= Feynman Diagrams 
+== Feynman Diagrams 
 
 
 

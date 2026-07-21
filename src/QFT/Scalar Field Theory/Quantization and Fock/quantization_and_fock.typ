@@ -1,9 +1,9 @@
 #import "../../macros.typ":*
-= Scalar Field Theory
+== Scalar Field Theory
 - Scalar Field Theory is fairly similar to Classical Field Theory with the exception that it is quantized via the methods that will be presented shortly. This ensures that it obeys the laws of quantum mechanics, while still being a "Toy Theory" due to the simplicity of the objects involved in it ((potentially) complex fields $pphi$ as opposed to _vectors_ $A_mu$ or _spinors_ $psi$ which are closer to real, physical particles).
-== Quantization
+=== Quantization
 
-- As seen in David Tong's Quantum Field Theory Notes, one could try to naively try to quantize the Schrodinger Equation (via the use of a series to have the equation be on-shell), which would bring rise to some problems
+- As seen in 's Quantum Field Theory Notes, one could try to naively try to quantize the Schrodinger Equation (via the use of a series to have the equation be on-shell), which would bring rise to some problems
 
 $
 
@@ -14,7 +14,7 @@ H ket(psi) = i partial_t ket(psi)
 H = sqrt(hat(p)^2 + m^2)
 $
 
-=== Harmonic Oscillator/First Quantization
+==== Harmonic Oscillator/First Quantization
 
 
 - The standard Hamiltonian for a simple harmonic oscillator is $ H = 1/2 p^2/(2 m) + 1/2 m omega^2 x^2 $. The relevance to quantization will become apparent.
@@ -31,15 +31,15 @@ $
   - $hat(N) ket(n) = n ket(n)$
   - $a^dagger ket(n) = sqrt(n+1) ket(n+1)$
   - $a ket(n) = sqrt(n) ket(n-1)$
-=== Heisenberg Picture
+==== Heisenberg Picture
   - $ i (dif)/(dif t) a = [a,H] = [a,a(a^dagger a + 1/2)] = omega(a a^dagger a - a^dagger a a ) = omega [a,a^dagger] a = omega a $
   - Solution is $ a(t) = e^(- i omega t) a(0) $
-=== Relativistic Fields
+==== Relativistic Fields
 - A common relativistic equation (heavy foreshadowing) for a (free) field is the equation $ square pphi = 0. $
   - Solution to this is $ pphi(x,t) = integral diff(3,p) [a_p (t) e^(i arrow(p) dot arrow(x)) + tilde(a_p) (t) e^(- i arrow(p) dot arrow(x))]   $
   which is written in a fairly suggestive manner
 
-=== 2nd Quantization
+==== 2nd Quantization
 #definition("Second Quantization")[To obtain 2nd quantization (and hence quantum field theory), one can use an annihilation operator $a_p$ and a creation operator $a_p^dagger$ which exist per wave number as opposed to being universal since now, we utilize infinite harmonic oscillators which exist per $p$
 ]
 - Free Hamiltonian is obtained via integration over these $ H = integral diff(3,p) omega_p (a^dagger_p a_p + 1/2) $
@@ -49,7 +49,7 @@ $
   - Each (of the infinitely many) point of momentum $arrow(p)$ gets its own harmonic oscillator (which we integrate over to obtain our result)
   - The $n$th excitation of the harmonic oscillator $arrow(p)$ as being a state with $n$ particles
 
-=== Fock Space
+==== Fock Space
   - Instead of Hilbert space $cal(H)$, like in Quantum Mechanics/First Quantization, we have a _Fock Space_ $cal(F)$.
   - A Fock space $cal(F)$ is the direct sum of Hilbert spaces $cal(H)_n$, that is, $ cal(F) = plus.o.big_n cal(H)_n $
   - States in $cal(H)_n$ are linear combinations of ${ket(p_1^mu dots p_n^mu)}$
@@ -59,7 +59,7 @@ $
   $p^0 = sqrt(arrow(p)^2 + m^2 )$ so $ket(p) = ket(arrow(p)) = ket(p^mu)$ due to no loss of generality (this only works if it is on-shell).
 ]
   
-=== Field Expansion
+==== Field Expansion
 - Previously, we noted that $[a,a^dagger] = 1$. This generalizes to $[a_k , a^dagger_p] = (2 pi)^3 delta^3(arrow(p)-arrow(k))$
 - $a^dagger_p ket(0) = 1/(sqrt(2 omega_p) ) ket(p)$
 - $braket(0) = 1$ since it is the vacuum ground state
@@ -73,7 +73,7 @@ $
   This is the expected result of $braket(arrow(p),arrow(x))$, and so we conclude $pphi_0(arrow(x)) ket(0) = ket(arrow(x))$
 ]
 
-=== Time Dependence
+==== Time Dependence
 - Because of Heisenberg's equations of motion, in the Heisenberg perspective, $a_p (t)$ and $a_p^dagger (t)$ are time dependent
   - $a_p (t) = e^(-i omega_p t) a_p, a_p^dagger (t) = e^(i omega_p t) a_p^dagger $
 - Heisenberg equations of motion

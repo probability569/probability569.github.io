@@ -1,9 +1,9 @@
 #import "../../macros.typ":*
 
 
-= Propagators
+== Propagators
 
-== Green's Functions
+=== Green's Functions
 
 #definition("Green's Functions")[
   A Green's function is a function of the form $A^(-1)$ where $A$ is an operator. A standard way to evaluate these green function operators is via a Fourier transform into $k$-space #footnote[ $k$-space is effectively momentum space due to the relation $p = planck k$ and the fact that we are using natural units  ]. This is a type of _propagator_.
@@ -35,7 +35,7 @@
   - Have that $tilde([square^n delta^4])(k) = (-k^2)^n$ and $tilde([triangle^n delta^3])(k) = (-arrow(k)^2)^n$
 ]
 
-== Perturbation Theory
+=== Perturbation Theory
 
 #definition("Perturbation Theory")[
   This topic is introduced in Quantum mechanics (and often before-hand) where we consider an initial state that we can solve and then higher order terms that we continue to be able to solve. Perturbation theory only works when the leading term is the "dominant" force in play. Often, we can utilize an initial term which is _non-interacting_ and extra terms that are _interacting_.
@@ -54,7 +54,7 @@
   In fact, something being defined as $1/square J$ is not that uncommon, as it also happens with the Electromagnetic field.
 ]
 
-== OFPT
+=== OFPT
 
 
 
@@ -99,9 +99,11 @@ This provides $ bra(pphi_f)T ket(pphi_i) = bra(pphi_f) V ket(pphi_i) + bra(pphi_
    - Since both $ket(i)$ and $ket(f)$ have 2 electrons and no photons, $V_(i j) = 0$ //WTF
    
  ]
-=== Retarded and Advanced Propagators
+==== Retarded and Advanced Propagators
  
 - This gets split into two states. (propagated by the _Retarded_ Propagator and the _Advanced_ Propagator)
+
+- The propagators that this creates are foundational to quantum field theory, (the advanced and retarded ones), which is the primary reason behind this methodology.
 
  #figure(
    feyndrawgram(json("ret_propag_feynman.json"),unit:0.5pt) 
@@ -117,13 +119,13 @@ This provides $ bra(pphi_f)T ket(pphi_i) = bra(pphi_f) V ket(pphi_i) + bra(pphi_
 
 
  #figure(
-   feyndrawgram(json("ret_propag_feynman.json"),unit:0.5pt), caption:[ Advanced State ]
+   feyndrawgram(json("adv_propag_feynman.json"),unit:0.5pt), caption:[ Advanced State ]
 
  )
 - For the _advanced state_, a similar result is derived
   - $ V^A_(n i) = mel(psi^4_e phi^gamma , V, psi_e^2) $
 
-=== Evaluating The Propagators
+==== Evaluating The Propagators
 - $ V^R_(n i )= mel(psi^3_e phi^gamma, V ,psi^1_e) = e/2 integral dif^3 x mel(psi^3_e phi^gamma, psi_e (x) pphi(x) psi_e (x), psi^1_e) $
 #note[
   - Free field (like the photon and electron fields inside of the integral)
@@ -134,12 +136,20 @@ This provides $ bra(pphi_f)T ket(pphi_i) = bra(pphi_f) V ket(pphi_i) + bra(pphi_
 
 - First order: $ T_(f i) = integral dif^3 arrow(p)_gamma ddelta(3,arrow(p)_1 - arrow(p)_2 - arrow(p)_gamma) ddelta(3,arrow(p)_2 - arrow(p)_4 + arrow(p)_gamma) e^2/(E_i - E_n) $
     - Energy is not conserved in such intermediate states (otherwise $E_i = E_n$ would blow u
-=== Energy Calculations
+==== Energy Calculations
 
 
-- Want to calculate the energy of the states
+- We want to calculate the energy of the states
 
 #rules("Denotations")[
   - Momenta of particles are $ arrow(p)_1, arrow(p)_2, arrow(p)_3, arrow(p)_4, arrow(p)_gamma $
+  - The energy of each respective particle is
   
 ]
+
+
+
+
+
+
+#include "interactions.typ"
