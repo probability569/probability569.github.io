@@ -71,8 +71,3 @@
 - This implies that $ mel(p_3 dots.c p_j, S, p_1 p_2) = [i integral dif^4 x_1 e^(- i p_1 x_1) (square_1 +m^2)] \ times dots.c times [i integral dif^4 x_j e^(i p_j x_j) (square_j +m^2)] \ times bra(Omega) T scr(O)_1 (x_1) dots scr(O)_j (x_j) ket(Omega) $
 
 
-=== Feynman Propagators
-
-- We can define the feynman propagator $G_F (x,y)$ to be implicitly defined by $ (square_x +m^2) G_F (x,y) = - i delta^(4)(x-y) $ 
-- This provides us, in posistion space, with $ G_F (x,y) = integral diff(4,p) i/(p^2 - m^2 + i epsilon) e^(i p dot (x-y)) \ equiv integral diff(4,p) G_F (p) e^(-i p dot(x-y)) $ 
-  - The momentum space Feynman Propagator $G_F (p)$ is defined as $ G_F (p) equiv i/(p^2 -m^2 + i epsilon) $

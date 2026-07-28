@@ -3,6 +3,7 @@
 
 #import "@preview/feyndrawgram:1.0.0": feyndrawgram
 
+#import "@preview/mitex:0.2.7":*
 
 #import "@preview/physica:0.9.8": *
 
@@ -16,6 +17,30 @@
 //#let ket(x) = $|#x chevron.r$
 //#let bra(x) = $chevron.l #x|$
 
+
+
+
+// Map LaTeX commands to your physica functions
+#let qft-macros = ```tex
+
+\newcommand{\bra}[1]{\langle #1 \vert}
+\newcommand{\ket}[1]{\vert #1 \rangle}
+\newcommand{\braket}[2]{\langle #1 \vert #2 \rangle}
+\newcommand{\mel}[3]{\langle #1 \vert #2 \vert #3 \rangle}
+\newcommand{\ev}[1]{\langle #1 \rangle}
+```
+
+// 2. Stitch the preamble and the OCR math together
+#let qft(body) = mitex(qft-macros.text + "\n" + body.text)
+
+
+// Define the mapping dictionary
+// Create the custom wrapper, passing the macros directly
+
+
+// Create a custom block parser so you don't have to type config: physica-conf every time
+
+
 #let feynman(body) = math.cancel(angle: 15deg, body)
 
 custom function `feynman`: $feynman(x)$
@@ -26,6 +51,8 @@ custom function `feynman`: $feynman(x)$
 #let lag = $cal(L)$
 
 #let diff(x,y) = $(dif^#x #y)/(2 pi)^#x$
+
+#let fquant(n,p,x) = $integral diff(#n,#p) 1/sqrt(2 omega_#p) (a_#p e^(- i #p #x) + a^dagger_(#p) e^(i #p #x) ) $
 
 
 #let ddelta(x,y) = $(2 pi)^#x op(delta^#x)(#y)$

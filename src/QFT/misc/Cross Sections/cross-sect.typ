@@ -58,9 +58,9 @@
 
 //- This was seen earlier as $dif Pi$, but now we gave it a slightly more formal definition and are applying it to the probability
 
-- Utilizing this, (as well as the derived S-matrix elements from earlier) we can write the differential probability $dif p$ via $ dif P = (abs(mel(f,S,i))^2)/(braket(f) braket(i)) dif Pi = (ddelta(4,Sigma p) times T V)/(2 E_1 V times 2 E_2 V) times 1/(Pi_j (2E_j V) abs(scr(M))^2 product_j diff(3,p_j) V = T 1/(2 E_1 times 2 E_2) abs(scr(M))^2 dif Pi_("LIPS") $
+- Utilizing this, (as well as the derived S-matrix elements from earlier) we can write the differential probability $dif p$ via $ dif P = (abs(mel(f,S,i))^2)/(braket(f) braket(i)) dif Pi = (ddelta(4,Sigma p) times T V)/(2 E_1 V times 2 E_2 V) \ times 1/(Pi_j (2E_j V)) abs(scr(M))^2 product_j diff(3,p_j) V \ = T 1/(2 E_1 times 2 E_2) abs(scr(M))^2 dif Pi_("LIPS") $
 
-- This easily gives us the cross section for $2 -> j$ decay: $ dif sigma = 1/((2E_1)(2E_2)abs(arrow(v)_1 - arrow(v)_2) abs(scr(M))^2 dif Pi_("LIPS") $
+- This easily gives us the cross section for $2 -> j$ decay: $ dif sigma = 1/((2E_1)(2E_2)abs(arrow(v)_1 - arrow(v)_2)) abs(scr(M))^2 dif Pi_("LIPS") $
 
 === Particle Decay Rate
 

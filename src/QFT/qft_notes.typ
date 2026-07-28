@@ -1,9 +1,12 @@
 #import "@preview/ilm:1.1.2": *
+#import "@preview/mousse-notes:1.1.0":*
+
+
 
 #import "@preview/ctheorems:1.1.3": *
 #show: thmrules
 
-#set enum(numbering: "(a)")
+//#set enum(numbering: "(a)")
 
 #set heading(numbering: (..nums) => {
   let vals = nums.pos()
@@ -47,7 +50,7 @@
 
 
 #show: ilm.with(
-  title: "QFT, The Standard Model, and Supersymmety",
+  title: "QFT, The Standard Model, and Supersymmetry",
   author: "Chance Emrich",
   date: datetime(year: 2026, day: 26, month: 05),
 )
@@ -67,7 +70,8 @@
 
 //#include "Field Theories/Field_Theories.typ"
 //
-
+#include("Vector Field Theory/scalarqed.typ")
 #include("QED/Lorentz/lorentz_and_spinors.typ")
 #include "QED/QED.typ"
+
 #bibliography("Citations/works.bib", full:true)

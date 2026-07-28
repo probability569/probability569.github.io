@@ -6,10 +6,6 @@
   Quantum Electrodynamics is a relatively simple theory with only one force involved (as suggested by the name, it is the electromagnetic force), mediated by the _photon_  $A_mu$ and one/two type(s) of fermion depending on what you consider a type of particle  (an _electron_/_positron_) 
 ]
 
-== Scalar QED
-- Lagrangian is $ lag =  -1/4 F_munu^2 + abs(D_mu pphi)^2 - m^2 pphi^* pphi $
-  - $D_mu pphi = partial_mu pphi + i e A_mu$
-  - $(D_mu pphi)^* = partial_mu pphi^* - i  A_ u$
 === Charge
 
 - The charge in quantum electrodynamics is associated with the $"U"(1)$ symmetry $ pphi -> e^(- i alpha(x)) pphi $ (in fact, this applies in spinor QED as well, due to the )
@@ -69,3 +65,27 @@
 
 - In order to properly evaluate such integrals to give a physical quantity, it is key to utilize a technique known as *renormalization*
   - There are different types of renormalization, such as parametrizing integral bounds, taking the limit of the number of dimensions, etc
+
+
+#mitex(`
+\begin{equation}
+\langle A_i\rangle = - \int_{\text{all space-time}} \mathrm{d}x_1 \ldots \mathrm{d}x_n \left[ e^{-iH(x)S\delta t} \right] \\
+\times \langle Z_{n,1}(x-c/2)\rangle \langle Z_{n,1}(e^{iH(x)}\delta t) \rangle
+\end{equation}
+`)
+
+#mitex(`
+\begin{equation}
+[\hat{\epsilon}^{(s)}_{\mu},\bar{\psi}(y)]=i\gamma^3\delta^{(4)}(\vec{x}-\vec{y})
+\end{equation}
+`)
+
+
+#mitex(`
+\begin{equation}
+\hat{\phi}(\vec{x})|\psi\rangle = \text{const}
+\end{equation}
+`)
+
+
+#mitex(` \begin{equation} |\phi_{\nu}^{k}\rangle = \frac{1}{\sqrt{L}} \sum_{j=0}^{L-1} \exp \left[ -\frac{2\pi i}{L}(DS_{\nu} + k) j \right] \\ \times e^{-i\theta_j}|q_j,p_j\rangle_{\text{tor}}. \end{equation} `)
