@@ -133,5 +133,6 @@ K_1 = i mat(
  $ sigma^i sigma^j = delta^(i j) i epsilon^(i j k) sigma^k, {sigma^i, sigma^j} = 2 delta^(i j), [sigma^i, sigma^j] = 2 i epsilon^(i j k) sigma^k $ For Pauli Matrices 
 ]
 
-- A useful quantity to define is a representation of the Lorentz Algebra $ S^(rho sigma) = 1/2 [gamma^rho,gamma^sigma] = 1/2 gamma^rho gamma^sigma - 1/2 g^(rho sigma) $ 
-- The reason that this is a representation of the
+- A useful quantity to define is a representation of the Lorentz Algebra $ S^(rho sigma) = 1/2 [gamma^rho,gamma^sigma] = 1/2 gamma^rho gamma^sigma - 1/2 g^(rho sigma) $
+
+

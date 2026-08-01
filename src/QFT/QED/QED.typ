@@ -18,7 +18,21 @@
 
 
 === Solution to the Dirac Equation
+
+- We want to quantize our dirac spinors $psi$.
+- We follow a similar procedure to what we did with photons (we will introduce basis spinors similar to polarizations $epsilon_mu$ )
+- The dirac equation #qft(```latex
+(i\not\partial - m)\psi = 0
+```) implies that, for spinors
+#qft(```\left((i\partial_\mu - eA_\mu)^2 - \frac{e}{2} F_{\mu\nu} \sigma^{\mu\nu} - m^2\right) \psi = 0
+```)
+
+- For antispinors, #qft(```latex
+\overline{\psi} \left( (i\overleftarrow{\partial}_\mu + eA_\mu)^2 + \frac{e}{2} F_{\mu\nu} \sigma^{\mu\nu} - m^2 \right) = 0
+```)
+
 - Similarly to a Scalar field theory, we will quantize particles by writing $ psi_s (x) = integral diff(3,p) u_s (p) e^(i p x) $ for particles and $ chi_s (x) = integral diff(3,p) v_s (p) e^(i p x) $ for antiparticles
+
 - These $u_s (p)$ and $v_s (p)$ are _basis spinors_ which satisfy the momentum space dirac equation. That is, $ mat(-m, p dot sigma; p dot macron(sigma), -m) u_s (p) = mat(-m, -p dot sigma; -p dot macron(sigma),  -m;) v_s (p) = 0 $ 
 - Again, these $u_s (p)$ and $v_s (p)$ are 4-index Dirac spinors.
 #rules("Basis Dirac Spinors")[In general, the solution to this equation is $ u_s (p) = mat(sqrt(p dot sigma) xi; sqrt(p dot macron(sigma)) xi), v_s (p) = mat(sqrt(p dot sigma) eta_s ; -sqrt(p dot macron(sigma)) eta_s) $]
@@ -53,7 +67,13 @@
 
 - The Feynman propagator clearly gives rise to the electron propagator present on internal electrons $ "feynman diagram" = i(feynman(p) + m)/(p^2 - m^2 + i epsilon) $
 
+- The QED vertex factor is given by the interaction term $-e macron(psi) gamma^mu A_mu psi$
+$ #feyndrawgram(json("Diagrams/vert_1.json")) quad  = quad #feyndrawgram(json("Diagrams/vert_2.json")) \ = quad #feyndrawgram(json("Diagrams/vert_3.json"))  quad = quad #feyndrawgram(json("Diagrams/vert_4.json")) quad = (-i e gamma^mu) $ 
 
+- Notice how all of these terms are equivalent (as opposed to scalar QED)
+  - This is one of the many differences between spinor QED and scalar QED
+
+- Another difference in Spinor QED is the fact that it has no seagull interaction allowed by an $A^2 pphi^2$ term in scalar QED, simply because this term doesnt exist in QED
 
 == Renormalization
 
@@ -67,25 +87,3 @@
   - There are different types of renormalization, such as parametrizing integral bounds, taking the limit of the number of dimensions, etc
 
 
-#mitex(`
-\begin{equation}
-\langle A_i\rangle = - \int_{\text{all space-time}} \mathrm{d}x_1 \ldots \mathrm{d}x_n \left[ e^{-iH(x)S\delta t} \right] \\
-\times \langle Z_{n,1}(x-c/2)\rangle \langle Z_{n,1}(e^{iH(x)}\delta t) \rangle
-\end{equation}
-`)
-
-#mitex(`
-\begin{equation}
-[\hat{\epsilon}^{(s)}_{\mu},\bar{\psi}(y)]=i\gamma^3\delta^{(4)}(\vec{x}-\vec{y})
-\end{equation}
-`)
-
-
-#mitex(`
-\begin{equation}
-\hat{\phi}(\vec{x})|\psi\rangle = \text{const}
-\end{equation}
-`)
-
-
-#mitex(` \begin{equation} |\phi_{\nu}^{k}\rangle = \frac{1}{\sqrt{L}} \sum_{j=0}^{L-1} \exp \left[ -\frac{2\pi i}{L}(DS_{\nu} + k) j \right] \\ \times e^{-i\theta_j}|q_j,p_j\rangle_{\text{tor}}. \end{equation} `)

@@ -438,7 +438,131 @@ A_{\mu}(x) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} \sum_{j \in \
 \varepsilon^L_\mu (p) = (p_z/m, 0, 0, E/m)
 ```)
 
+- Notice that it satisfies the conditions #qft(```latex
+\epsilon^i_m \epsilon^{i*}_m = 1
+\epsilon^i_m p_m = 0
+```)
 
+- However, one must wonder. Where did the fourth degree of freedom go? Clearly, our vector field is functional with only these three as bases but it still begs the question.
+- There is still one more polarization that is perpindicular to all of these. This polarization is expressed as #qft(```latex
+\epsilon^\mu(p) = \frac{1}{m} p^\mu = \left( \frac{E}{m}, 0, 0, \frac{p}{m} \right)
+```)
+- In position space, it can be expressed as #qft(```latex
+\varepsilon_{\mu}^{S} = \frac{1}{m} \partial_{\mu} \alpha(x)
+```)
+
+- This means that it is invariant under lorentz transforms
+  - Hence, $epsilon_mu ^i$ do not mix with it
+- $"SO"(3)$ rotations only mix $epsilon^i_mu$, however there exist other lorentz transformations that can mix the others
+
+
+- Suppose that we fix $p^mu = q^mu$
+- Our polarization bectores are then #mi(```latex
+\varepsilon_\nu = c_j e^j_\mu(q)
+```)
+- Now suppose that we have a state $ket(epsilon) = c_j ket(j)$ such that $braket(j) = 1$
+- This implies that $braket(epsilon) = abs(c_1)^2 + abs(c_2)^2 + abs(c_3)^2 = "positive definite, L.I."$
+
+- The matrix element for our theory is $cal(M) = epsilon_mu M_mu$ where $epsilon_mu$ is a linear combination of $epsilon^j_mu$
+
+
+=== Massless Spin 1
+- We now have enough to establish our quantization for massless spin 1 (a photon)
+- Massless spin 1 is the same as massive spin 1 except for the fact that we only need 2 polarizations instead of 1
+
+#qft(```latex
+A_{\mu}(x) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} \sum_{i \in \{1,2\}} \left( \varepsilon_{\mu}^i(p) a_{p,i} e^{-ipx} + \varepsilon_{\mu}^{i*}(p) a_{p,i}^{\dagger} e^{ipx} \right)
+```)
+- A sample basis is again if $p$ points in $hat(z)$
+
+- Then, we have that #qft(```latex
+p^\mu = (E, 0, 0, E) \\
+\varepsilon_m^1(p) = (0, 1, 0, 0) \\
+\varepsilon_m^2(p) = (0, 0, 1, 0)
+```)
+
+- This satisfies the conditions #mi(```latex
+(\varepsilon_{\mu}^{i})^{2} = -1; \varepsilon_{\mu}^{i} p^{\mu} = 0
+```) 
+
+- There are, of course, orthogonal polarizations like we have seen before. #qft(```latex
+\epsilon_{\mu}^{f}(p) = (1, 0, 0, 1), \epsilon_{\mu}^{b} = (1, 0, 0, -1)
+```)
+- These are known as forward and backwards polarizations
+
+- Notice now that we cannot create $epsilon_mu$ due to mixing with longitudinal polarization under $"SO"(3)$
+- In this case, longitudinal polarization becomes forward polarization
+- Hence, $"SO"(3) -> "ISO"(2)$ or #qft(```latex
+\lim_{m \to 0} \varepsilon_\mu^i(p) = \varepsilon_\mu^f(p) \propto p_\mu
+```)
+
+- Under $"ISO"(2)$, these polarization bases transform as #qft(```latex
+\varepsilon_{\mu}^{1}(p) \to C_{11}(\Lambda) \varepsilon_{\mu}^{1}(p) + C_{12}(\Lambda) \varepsilon_{\mu}^{2}(p) + C_{13}(\Lambda) p_{\mu} \\
+\varepsilon_{\mu}^{2}(p) \to C_{21}(\Lambda) \varepsilon_{\mu}^{1}(p) + C_{22}(\Lambda) \varepsilon_{\mu}^{2}(p) + C_{23}(\Lambda) p_{\mu}
+```)
+
+=== Photon Propagator
+
+- We denote the photon propagator by $Pi^munu$ which is definte by #qft(```latex
+\mel{0}{T \{ A^\mu(x) A^\nu(y) \}}{0} = i \int \frac{d^4 p}{(2\pi)^4} e^{ip(x-y)} \Pi^{\mu\nu}(p)
+```) evaluated in the free theory
+
+==== Photon Propagator as a Green's Function
+
+- Suppose we have the lagrangian #qft(```latex
+\mathcal{L} = -\frac{1}{4} F_{\mu\nu}^2 - A_\mu J^\mu
+```)
+- Then, the equations of motion are #qft(```latex
+\partial_\mu F_{\mu\nu} = J_\nu
+```)
+  - This implies that #qft(```latex
+\partial_\mu \partial_\mu A_\nu - \partial_\mu \partial_\nu A_\mu = J_\nu
+```) and hence, via a fourier transform, #qft(```latex
+\left( -p^2 \delta_{\mu\nu} + p_\mu p_\nu \right) A^\mu = J_\nu
+```)
+- We want $A_mu$ = $Pi_munu J_nu$. Therefore, as a green's function equation, #qft(```latex
+\left( -p^2 \delta_{\mu\nu} + p_\mu p_\nu \right) \Pi_{\mu \alpha} = g_{\mu \alpha}
+```)
+
+- However, there is a drawback. Notice that #qft(```latex
+\det(-p^2 g_{\mu\nu} + p_\mu p_\nu) = 0
+```)
+- Therefore, we must choose a gauge or add an auxiliarly Field 
+  - Choosing a gauge is inconvenient and has 4 DOF instead of 2 
+  - Adding an auxiliary field is similar to utilizing Lagrange multipliers
+- We let our lagrangian be #qft(```latex
+\mathcal{L} = -\frac{1}{4} F_{\mu\nu}^2 - \frac{1}{2\xi} (\partial_\mu A^\mu)^2 - J_\mu A^\mu
+```)
+  - Small $xi$ enforces $partial_mu A_mu = 0$
+- Thus we have that #qft(```latex
+\left[ -p^2 g_{\mu\nu} + \left( 1 - \frac{1}{\xi} \right) p_\mu p_\nu \right] \Pi_{\mu\nu} = g_{\mu\nu}
+```)
+
+- Therefore, in terms of our new parameter $xi$, #qft(```latex
+\Pi_{\mu \nu} = \frac{g_{\mu \nu} - (1 - \xi) \frac{p_\mu p_\nu}{p^2}}{p^2}
+```)
+- It is simple to check this. $ #qft(```latex
+\left[ -q^2 g_{\mu\alpha} + \left( 1 - \frac{1}{\xi} \right) p_\mu p_\alpha \right] \Pi_{\alpha\nu} =
+```) \ #qft(```latex
+\left[ p^2 g_{\mu\nu} - \left( 1 - \frac{1}{\xi} \right) p_\mu p_\nu \right] \left[ p^2 g_{\alpha\nu} - (1 - \xi) p_\alpha p_\nu \right] \frac{1}{p^4}
+```) \  #qft(```latex
+= g_{\mu \nu} + \left[ -\left( 1 - \frac{1}{\xi} \right) - (1 - \xi) + \left( 1 - \frac{1}{\xi} \right)(1 - \xi) \right] \times \frac{p_{\mu} p_{\nu}}{p^2} = g_{\mu \nu}
+```) $
+
+- Hence, we have our result for the photon propagator: 
+#qft(```latex
+i \Pi_{\mu \nu} = \frac{-i}{p^2 + i\epsilon} \left[ g_{\mu \nu} - (1 - \xi) \frac{p_\mu p_\nu}{p^2} \right]
+```)
+==== Covariant Gauges
+- Finally, there are some gauges that are useful to enforce via $xi$ which make calculations simpler. Notice that the final result for any physical observable must be independent of $xi$ due to gauge invariance which implies that $xi$ is to be chosen to make our lives easier.
+
+- There is the feynman guage where $xi = 1$: #qft(```latex
+i\Pi^{\mu\nu}(p) = \frac{-ig^{\mu\nu}}{p^2 + i\varepsilon}
+```)
+- There is the Lorenz gauge where $xi = 0$: #qft(```latex
+i\Pi^{\mu\nu}(p) = -i \frac{g^{\mu\nu} - \frac{p^\mu p^\nu}{p^2}}{p^2 + i\varepsilon}
+```)
+  - Notice that as $xi->0$, $partial_mu A_mu -> 0$
 == Scalar QED in More Detail
 - Scalar Quantum Electrodynamics describes a photon $A_mu$ and another particle (presumably the electron) $pphi$
 
@@ -446,6 +570,8 @@ A_{\mu}(x) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} \sum_{j \in \
 - Lagrangian is $ lag =  -1/4 F_munu^2 + abs(D_mu pphi)^2 - m^2 pphi^* pphi $
   - $D_mu pphi = partial_mu pphi + i e A_mu$
   - $(D_mu pphi)^* = partial_mu pphi^* - i  A_ u$
+
+=== Quantizing Scalar Fields
 - The equations of motion for Scalar Quantum Electrodynamics are simililar to the klein gordon equation
   - #qft(```latex
 (\Box + m^2) \phi = -i (-e A_\mu) \partial^\mu \phi + i \partial_\mu (-e A^\mu \phi) + (-e A_\mu)^2 \phi
@@ -469,12 +595,223 @@ A_{\mu}(x) = \int \frac{d^3p}{(2\pi)^3} \frac{1}{\sqrt{2\omega_p}} \sum_{j \in \
 ```)
 === Charge
 
-- A scalar field 
+- In scalar QED, as seen before, charge is associated with the $"U"(1)$ gauge symmetry #mi(```latex
+\phi \to e^{-i\alpha} \phi
+```) which becomes important later
+
+
 
 
 === Scalar QED Feynman Rules
 
-#qft(```latex
+- The lagrangian for Scalar QED is #qft(```latex
 \mathcal{L} = -\frac{1}{4} F_{\mu\nu}^2 - \phi^* (\Box + m^2) \phi - i e A_\mu (\phi^* \overleftrightarrow{\partial_\mu} \phi) + e^2 A_\mu^2 |\phi|^2
 ```)
+- The complex scalar propagator is $ #feyndrawgram(json("scalar_feyn.json")) = #qft(```latex
+\frac{1}{p^2 - m^2 + i\epsilon}
+```) $
 
+- The photon propagator is $ #feyndrawgram(json("photon_feyn.json")) = #qft(```latex
+\frac{-i}{p^2+i\epsilon}\left[g_{\mu\nu}-(1-\xi)\frac{p_\mu p_\nu}{p^2}\right]
+```) $
+- There are additionally four different vertex interactions which are as follows:
+
+- The first interaction is $ #feyndrawgram(json("scalar_inter_1.json")) = #qft(```latex
+ie(-p^1_{\mu} - p^{2}_{\mu})
+```) $ 
+
+- The second interaction is $ #feyndrawgram(json("scalar_inter_2.json")) = #qft(```latex
+ie(p^1_{\mu} + p^2_{\mu})
+```) $
+- The third interaction is $ #feyndrawgram(json("scalar_inter_3.json")) quad = #qft(```latex
+ie\left(-p_\mu^1+p_\mu^2\right)
+```) $
+
+- Finally, the fourth interaction is $ #feyndrawgram(json("scalar_inter_4.json")) quad = #qft(```latex
+ie(-p^1_\mu + p^2_\mu)
+```) $
+
+- These are the _only_ interactions (at tree level) permitted by QED (scalar QED but similar is true for spinor QED) due to the fact that the interaction term in the lagrangian is #qft(```latex
+ie A_{\mu} [\phi^* \overleftrightarrow{\partial_{\mu}} \phi]
+```)
+
+
+- There are also loops which are possible in any quantum theory. 
+  - There are an infinite number of such loops, so it is impossible to enumerate them.
+  - However, here are a few examples:
+
+  $ #feyndrawgram(json("scalar_loop_1.json")) \ = epsilon_mu (p) integral diff(4,k)  (i e k) (i)/(k^2 -m^2) i/((p+k)^2 -m^2) (-i e k) epsilon_nu^* (p)  $
+- This yields a divergence which is the reason that renormalization exists (as you will see later)
+
+- There are also other loops, such as $ #feyndrawgram(json("scalar_loop_2.json")) $ (which I have not evaluated here). 
+
+- There is an additional vertex which is given by the term $ lag_"int" = e^2 A_mu^2 abs(pphi)^2 $
+  - This is not unphysical but it does not happen in reality since, although it appears in our toy theory, it does not appear in real QED and hence it doesn't actually represent a real interaction
+    - It is required in scalar QED due to gauge invariance
+  - This vertex is known as the _seagull vertex_
+- The seagull vertex Feynman Diagram is $ #feyndrawgram(json("seagull.json")) = 2 i e^2 g_munu $ 
+
+==== External States
+
+- External States are extremely important for understanding how we go from a diagram (with photons, it will have tensor indices $mu,nu$) to a squared matrix element which is what we need to calculate the S matrix.
+
+- The idea is that photons that exit and enter the graph (and hence are external) get factors of polarization, which you will see
+
+
+- Recall the photon quantization: #qft(```latex
+A_{\mu}(x) = \int \frac{d^3k}{(2\pi)^3} \frac{1}{\sqrt{2\omega_k}} \sum_{i=1}^2 \left( \varepsilon_{\mu}^i(k) a_{k,i} e^{-ikx} + \varepsilon_{\mu}^{i*}(k) a_{k,i}^{\dagger} e^{ikx} \right)
+```)
+
+- External states have momenta and polarization 
+
+- Note that #qft(```latex
+\mel{0}{A_\mu(x)}{k, \epsilon} = \epsilon_\mu(k) e^{-ikx}
+```)
+- Hence, the LSZ reduction is modified by adding $epsilon_mu$ for incoming photons and $epsilon_mu^*$ for outgoing photons
+
+=== Scattering In Scalar QED
+
+- Now, we move onto real particle interactions that occur in scalar QED
+
+- It is convenient to utilize three variables known as the mandelstam variables: $s,t,u$ which will be defined soon.
+- Consider the $t$ channel defined as $ i cal(M)_t = #feyndrawgram(json("t_channel.json")) \ #qft(```latex
+= (-ie)(p_1^\mu + p_3^\mu) \frac{-i\left(g_{m\nu} - (1-\xi)\frac{k_\mu k_\nu}{k^2}\right)}{k^2} (-ie)(p_2^\nu + p_4^\nu)
+
+```) $ with #mi(```latex
+k^\mu = p_3^\mu - p_1^\mu
+```)
+
+- Notice that #qft(```latex
+k^\mu(p_1^\mu + p_3^\mu) = p_3^2 - p_1^2 = m^2 - m^2 = 0
+```)
+- Hence, #qft(```latex
+\mathcal{M}_t = \frac{(p_1^\mu + p_3^\mu)(p_2^\mu + p_4^\mu)}{t}
+```)
+
+- Now consider the $u$ channel: $  i cal(M)_u = #feyndrawgram(json("u_channel.json")) \ = #qft(```latex
+(-ie)(p_1^\mu + p_4^\mu) \frac{-i[g_{\mu \nu} - (1-\xi)\frac{k_\mu k_2}{k^2}]}{k^2}(-ie)(p_2^\nu + p_3^\nu)
+```) $
+  - With #mi(```latex
+k^\mu \equiv p_4^\mu - p_1^\mu
+```)
+- Now we have similar equations to before
+- #qft(```latex
+\mathcal{M}_u = e^2 \frac{(p_1^\mu + p_4^\mu)(p_2^\mu + p_3^\mu)}{u}
+```)
+
+- The final diagram is the s-channel $ i cal(M)_s = #feyndrawgram(json("s_channel.json")) \ = (- i e)(-p_1^mu + p_2^mu) #qft(```latex
+\frac{-i\left(g_{\mu\nu}-(1-\xi)\frac{k_{\mu}k_{\nu}}{k^2}\right)}{k^2}
+```) (-i e) (-p_3^nu +p_4^nu) $ with $k^mu = p_1^mu + p_2^mu$
+- Notice that $k^mu (p_1^mu - p_2^mu) = 0$
+- Hence, this diagram evaluates to $ i cal(M)_s = ((p_1^mu -p_2^mu) (p_3^mu - p_4 ^mu))/s $
+- Our Mandelstam variables that we introduces $u,s,t$ evaluate to $ u = (p_4 - p_1)^2, quad s = (p_1 - p_2)^2, quad t = (p_1 +p_2)^2 $
+  - $s$ is commonly used to represent the square of the COM energy from a particle accelerator
+
+==== Moller Scattering
+
+- The cross secition for $e^- e^- -> e^- e^-$ moller scattering can be evaluated with $u$ and $t$ channels, providing #qft(```latex
+\frac{d\sigma}{d\Omega}(e^-e^- \to e^-e^-) \\ = \frac{e^4}{64\pi^2 E_{cm}^2} \left[ \frac{(p_1^\mu + p_3^\mu)(p_2^\mu + p_4^\mu)}{t} + \frac{(p_1^\mu + p_4^\mu)(p_2^\mu + p_3^\mu)}{u} \right]^2 \\ = \frac{\alpha^2}{4s} \left[ \frac{s-u}{t} + \frac{s-t}{u} \right]^2
+```)
+
+=== Ward Identity
+
+- Notice how the above matrix elements are all independent of our gauge parameter $xi$
+  - This relates to the Ward Identity, an extremely important result which can be generalized to the Ward Takahashi identity (as the reader may see later)
+
+- The photon propagator that we had was #qft(```latex
+i\Pi_{\mu\nu} = \frac{-i\left[g_{\mu\nu} - (1-\xi)\frac{p_\mu p_\nu}{p^2}\right]}{p^2 + i\varepsilon}
+```)
+- With an internal photon, the matrix element satisfies $ #qft(```latex
+M_{\mu\nu} \Pi^{\mu\nu} = 0
+```) $
+
+- Due to gauge invariance $Pi^munu$ should be independent of $xi$.
+- Hence, #qft(```latex
+\mathcal{M}_{\mu\nu} p^\mu p^\nu = 0
+```)
+- An alternative way to write this is $ p_mu cal(M)_munu =0 $
+
+- The proof for the ward identity is difficult perturbatively
+
+#example("Nontrivial Scattering")[
+- An example of using external photons is the non trivial $e^- e^- -> gamma gamma$
+- The t channel diagram for this is
+$ i cal(M)_t =  #feyndrawgram(json("electron_photon.json")) = #qft(```latex
+(-ie)^2 \frac{i(2p_1^\mu - p_3^\mu)(p_4^\nu - 2p_2^\nu)}{(p_1 - p_3)^2 - m^2} \epsilon_3^{*\mu} \epsilon_4^{*\nu}
+```) $
+
+- Then, #qft(```latex
+\mathcal{M}_t = e^2 \frac{(p_3 \cdot \varepsilon_3^* - 2p_1 \cdot \varepsilon_3^*)(p_4 \cdot \varepsilon_4^* - 2p_2 \cdot \varepsilon_4^*)}{p_3^2 - 2p_3 \cdot p_1}
+```)
+
+
+- The u channel diagram for this interaction is $ i cal(M)_u = #feyndrawgram(json("electron_photon_2.json")) = #qft(```latex
+ie^2 \frac{(p_3 \cdot \varepsilon_3^* - 2p_2 \cdot \varepsilon_3^*)(p_4 \cdot \varepsilon_4^* - 2p_1 \cdot \varepsilon_4^*)}{p_3^2 - 2p_3 \cdot p_2}
+```) $
+
+- Checking the ward identity, we replace $epsilon_3^(* nu)$ with $p_3^mu$. $ #qft(```latex
+\mathcal{M}_1 + \mathcal{M}_u = e^2 [p_4 \cdot \varepsilon_4^* - 2p_2 \cdot \varepsilon_4^* + p_4 \cdot \varepsilon_4^* - 2p_1 \cdot \varepsilon_4^*] \\ = 2e^2 \varepsilon_4^{*\mu} (p_4^\mu - p_2^\mu - p_1^\mu)
+```) != 0 $
+
+- The ward identity isnt true because we don't have the seagull vertex:
+
+$ i cal(M)_4 =  #feyndrawgram(json("seagull_2.json")) = #qft(```latex
+i e g_{\mu\nu} \epsilon_{3}^{* \mu} \epsilon_{4}^{* \nu} 
+```) $
+- Then, replacing polarization with momentum, #qft(```latex
+\mathcal{M}_f + \mathcal{M}_u + \mathcal{M}_4 = 2e^2 \varepsilon_{\mu} (p_4^\mu - p_2^\mu - p_1^\mu + p_3^\mu) \\
+= 0
+```)
+]
+
+
+#theorem("Massless Spin 1")[
+  - Massless Spin 1 particles imply conservation of charge
+]
+
+- This is a nontrivial result that has important implications
+
+
+- Consider $ i cal(M)_0 = #feyndrawgram(json("charge_cons_1.json")) $ where the diamond is a black box
+- Now consider $ #feyndrawgram(json("charge_cons_1.json")) -> #feyndrawgram(json("charge_cons_2.json")) = i cal(M)_i (p_i,q) $
+- Then, #qft(```latex
+\mathcal{M}_i(p_i, q) = (-ie) \frac{i[p_i^\mu + (p_i^\mu - q^\mu)]}{(p_i - q)^2 - m^2} \epsilon^\mu \mathcal{M}_0(p_i - q)
+```)
+
+- If $p_i^2 = m^2$, $q^2 = 0$, $q_mu epsilon_mu = 0$, we have that $ #qft(```latex
+\mathcal{M}_i(p_i, q) = -e \frac{p_i \cdot \varepsilon}{p_i \cdot q} \mathcal{M}_0(p_i, -q)
+```) $
+  - In the limit $abs(q dot p_i) << abs(p_j dot p_k)$, $ #mi(```latex
+\mathcal{M}_0(p_i - q) \approx \mathcal{M}_0(p_i)
+```) $
+  - In this case, we would obtain $ #qft(```latex
+\mathcal{M}_i(p_i, q) \approx - e {\frac{p_i \cdot \epsilon}{p_i \cdot q}} \mathcal{M}_0(p_i)
+```) $
+- In the case of an incoming positron, $ #qft(```latex
+\mathcal{M}_i(p_i, q) \approx e {\frac{p_i \cdot \epsilon}{p_i \cdot q}} \mathcal{M}_0(p_i)
+```) $
+
+- Now consider outgoing particles
+$ i cal(M)_0 = #feyndrawgram(json("charge_cons_3.json"))  $
+
+- Adding a photon coming out of the electron provides $ #feyndrawgram(json("charge_cons_3.json")) -> #feyndrawgram(json("charge_cons_4.json")) = i cal(M)_i $
+- This implies that $ #qft(```latex
+\mathcal{M}_i(p_i, q) = (-ie) \frac{i ( p_i^\mu + (p_i^\mu + q^\mu) )}{(p_i + q)^2 - m^2} \varepsilon_\mu \mathcal{M}_0(p_i + q)
+
+\\ \approx e \frac{p_i \cdot \varepsilon}{p_i \cdot q} \mathcal{M}_0(p_i)
+```) $
+
+- For a positron, #qft(```latex
+M_i(p_i, q) \approx -e \frac{p_i \cdot \varepsilon}{p_i \cdot q} M_0(p_i)
+```)
+
+- Notice that this implies that #qft(```latex
+\mathcal{M} \simeq e \mathcal{M}_0 \left[ \sum_{inc.} Q_i \frac{p_i \cdot \varepsilon}{p_i \cdot q} - \sum_{outgo.} Q_i \frac{p_i \cdot \varepsilon}{p_i \cdot q} \right]
+```)
+
+- Under a lorentz transformation, $epsilon_mu -> epsilon_mu + q_mu$ and hence #qft(```latex
+\mathcal{M} \rightarrow \mathcal{M} + \mathcal{M}_0 \left[ \sum_{\text{incoming}} Q_i - \sum_{\text{outgoing}} Q_i \right]
+```)
+- Therefore, #qft(```latex
+\sum_{\text{incoming}} Q_i = \sum_{\text{outgoing}} Q_i,
+```)
