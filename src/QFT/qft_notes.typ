@@ -73,5 +73,5 @@
 #include("Vector Field Theory/scalarqed.typ")
 #include("QED/Lorentz/lorentz_and_spinors.typ")
 #include "QED/QED.typ"
-
+#include("QCD/non_abelian.typ")
 #bibliography("Citations/works.bib", full:true)

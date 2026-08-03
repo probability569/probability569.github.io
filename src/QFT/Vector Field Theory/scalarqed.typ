@@ -1,5 +1,5 @@
 #import "../macros.typ":*
-= Vector Field Theory
+= Vectors
 
 == Gauge Invariance
 

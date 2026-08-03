@@ -1,4 +1,4 @@
-= Spinors and Lots of Math
+= Spinors
 
 == Lorentz and Spinors
 #import "../../macros.typ":*

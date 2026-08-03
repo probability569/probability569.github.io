@@ -1,7 +1,7 @@
 #import "../macros.typ":*
 
 
-= Math Toolkit
+= Math
 
 
 
