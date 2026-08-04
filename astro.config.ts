@@ -14,7 +14,7 @@ import { satteriSidenotes } from "./src/plugins/satteri-sidenotes"
 import { normalizeHeadings } from "./src/plugins/satteri-normalize-headings"
 
 export default defineConfig({
-  site: "https://astro-scholar.pages.dev",
+  site: "https://probability569.github.io",
   compressHTML: true,
   trailingSlash: "never",
   output: "static",
