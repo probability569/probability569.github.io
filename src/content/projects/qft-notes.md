@@ -4,15 +4,15 @@ title: "Typst QFT Notes"
 description: "Quantum Field Theory notes, equivalent to QFT I, II, and potentially III on MIT OCW."
 fromDate: "2026-05"
 toDate: "2023-08"
-code: "[https://github.com/probability569/qft-notes/](https://github.com/probability569/qft-notes/)"
-url: "[https://probability569.github.io/qft-notes/](https://probability569.github.io/qft-notes/)"
+code: "https://github.com/probability569/qft-notes/"
+url: "https://probability569.github.io/qft-notes/"
 types:
   - "coursework"
 skills:
   - "Physics"
   - "Lattice"
 selected: true
-release: "[https://github.com/probability569/qft-notes](https://github.com/probability569/qft-notes)"
+release: "https://github.com/probability569/qft-notes"
 ---
 
 
