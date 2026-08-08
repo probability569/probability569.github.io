@@ -1,4 +1,3 @@
-
 ```markdown
 ---
 title: "Typst QFT Notes"
