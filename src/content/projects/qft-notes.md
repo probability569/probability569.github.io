@@ -1,4 +1,4 @@
-```markdown
+
 ---
 title: "Typst QFT Notes"
 description: "Quantum Field Theory notes, equivalent to QFT I, II, and potentially III on MIT OCW."
@@ -14,5 +14,6 @@ skills:
 selected: true
 release: "[https://github.com/probability569/qft-notes](https://github.com/probability569/qft-notes)"
 ---
-```
+
+
 Quantum Field Theory notes for when I self studied QFT (mostly from Schwartz) over the summer.
