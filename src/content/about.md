@@ -1,7 +1,3 @@
-I study how computational systems shape public knowledge and collective
-decision-making. My work combines **open data**, reproducible analysis, and
-human-centered evaluation.
+I am a student, currently at Lynbrook High School, who is interested in physics. Currently, I have learned QFT (Quantum Field Theory), engaged in competitions, and am interested in learning Quantum Computing and String Theory both for fun and for the practical applications of QC.
 
-This site is generic demonstration content for Astro Scholar. Replace the
-profile, publications, projects, and writing with your own work through the
-Markdown-first customization surfaces documented in the repository.
+One of my favorite parts about physics is computational physics due to its accessibility. Specifically, I am interested in flux tubes in chromo- electro and magnetic fields due to the beauty of maxwellian fields being applied to non abelian gauge theory, combined with the general beauty of Lattice QCD.
