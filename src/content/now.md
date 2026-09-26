@@ -1,3 +1,4 @@
-- Writing a practical guide to transparent dataset documentation.
-- Preparing the next Responsible Computing workshop.
-- Improving the reproducibility checks used across sample projects.
+- Looking for research in computational/theoretical/experimental high energy physics
+- Typesetting notes that I have took on QFT over the Summer
+- Preparing for competitions such as AMCs, AIME, F=ma, USAPhO, etc.
+- Creating several small-scale lattice QFT projects to show my skills

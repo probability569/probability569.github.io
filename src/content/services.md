@@ -1,6 +1,6 @@
 I welcome conversations about:
 
-- reproducible research workflows;
-- accessible technical communication;
-- teaching with open data; and
-- maintaining small scholarly software projects.
+- computational physics; 
+- interesting research papers that you find;
+- learning higher math concepts to help with theory; and
+- maintaining small scholarly software projects
